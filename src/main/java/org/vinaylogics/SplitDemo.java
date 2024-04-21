@@ -1,14 +1,24 @@
 package org.vinaylogics;
 
+import org.apache.flink.api.common.eventtime.WatermarkStrategy;
 import org.apache.flink.api.common.functions.MapFunction;
+import org.apache.flink.api.common.serialization.SimpleStringEncoder;
 import org.apache.flink.api.common.typeinfo.TypeInformation;
+import org.apache.flink.api.java.io.TextInputFormat;
 import org.apache.flink.api.java.utils.ParameterTool;
+import org.apache.flink.connector.file.sink.FileSink;
+import org.apache.flink.connector.file.src.FileSource;
+import org.apache.flink.connector.file.src.reader.TextLineInputFormat;
+import org.apache.flink.core.fs.Path;
 import org.apache.flink.streaming.api.datastream.DataStream;
 import org.apache.flink.streaming.api.datastream.SingleOutputStreamOperator;
 import org.apache.flink.streaming.api.environment.StreamExecutionEnvironment;
 import org.apache.flink.streaming.api.functions.ProcessFunction;
+import org.apache.flink.streaming.api.functions.sink.filesystem.StreamingFileSink;
 import org.apache.flink.util.Collector;
 import org.apache.flink.util.OutputTag;
+
+import java.nio.charset.StandardCharsets;
 
 public class SplitDemo {
 
@@ -22,7 +32,17 @@ public class SplitDemo {
         // make parameters available in the web interface
         env.getConfig().setGlobalJobParameters(params);
 
-        DataStream<String> text = env.readTextFile("/home/vinay/oddeven");
+        // Define the path to the text file
+        Path filePath = new Path("/home/vinay/oddeven");
+
+        FileSource<String> fileSource = FileSource
+                .forRecordStreamFormat(new TextLineInputFormat(), filePath)
+                .build();
+
+        DataStream<String> text = env.fromSource(fileSource,
+                WatermarkStrategy.noWatermarks(),
+                "File Source"
+        );
 
         // SplitStream<Integer> Since SplitStream is deprecated and removed trying the alternative approach
         OutputTag<Integer> evenTag  = new OutputTag<>("even", TypeInformation.of(Integer.class));
