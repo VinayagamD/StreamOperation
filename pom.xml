@@ -106,7 +106,7 @@
                 <configuration>
                     <archive>
                         <manifest>
-                            <mainClass>org.vinaylogics.Aggregation</mainClass>
+                            <mainClass>org.vinaylogics.SplitDemo</mainClass>
                         </manifest>
                     </archive>
                 </configuration>
