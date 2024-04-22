@@ -125,7 +125,7 @@
                 <configuration>
                     <archive>
                         <manifest>
-                            <mainClass>org.vinaylogics.IterationDemo</mainClass>
+                            <mainClass>org.vinaylogics.assigment.TripsAnalytics</mainClass>
                         </manifest>
                     </archive>
                 </configuration>

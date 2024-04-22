@@ -38,7 +38,7 @@ public class IterationDemo {
         iteration.closeWith(notEqualToTen);
 
         DataStream<Tuple2<Long, Integer>> equalToTen = plusOne.filter(
-                (FilterFunction<Tuple2<Long, Integer>>) value -> value.f0 != 10).returns(new TupleTypeInfo<>(Types.LONG, Types.INT));
+                (FilterFunction<Tuple2<Long, Integer>>) value -> value.f0 == 10).returns(new TupleTypeInfo<>(Types.LONG, Types.INT));
 
         equalToTen.writeAsText("/home/vinay/ten");
 
