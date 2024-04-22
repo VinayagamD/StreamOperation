@@ -45,21 +45,20 @@ public class AverageProfit {
         });
         FileSink<Row> csvSink = FileSink.
                 forRowFormat(new Path("home/vinay/www"),
-                        (Encoder<Row>) (row,ouputStream)  -> {
+                        (Encoder<Row>) (row,outputStream)  -> {
+                            outputStream.write('(');
                             assert row.getField(0) != null;
-                            ouputStream.write('(');
-                            assert row.getField(0) != null;
-                            ouputStream.write(row.getField(0).toString().getBytes());
-                            ouputStream.write(',');
-                            ouputStream.write(row.getField(1).toString().getBytes());
-                            ouputStream.write(',');
-                            ouputStream.write(row.getField(2).toString().getBytes());
-                            ouputStream.write(',');
-                            ouputStream.write(row.getField(3).toString().getBytes());
-                            ouputStream.write(',');
-                            ouputStream.write(row.getField(4).toString().getBytes());
-                            ouputStream.write(')');
-                            ouputStream.write('\n');
+                            outputStream.write(row.getField(0).toString().getBytes());
+                            outputStream.write(',');
+                            outputStream.write(row.getField(1).toString().getBytes());
+                            outputStream.write(',');
+                            outputStream.write(row.getField(2).toString().getBytes());
+                            outputStream.write(',');
+                            outputStream.write(row.getField(3).toString().getBytes());
+                            outputStream.write(',');
+                            outputStream.write(row.getField(4).toString().getBytes());
+                            outputStream.write(')');
+                            outputStream.write('\n');
                         }
                         ).build();
 

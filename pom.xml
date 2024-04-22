@@ -125,7 +125,7 @@
                 <configuration>
                     <archive>
                         <manifest>
-                            <mainClass>org.vinaylogics.windows.AverageProfit</mainClass>
+                            <mainClass>org.vinaylogics.windows.WindowType</mainClass>
                         </manifest>
                     </archive>
                 </configuration>
