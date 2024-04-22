@@ -125,7 +125,7 @@
                 <configuration>
                     <archive>
                         <manifest>
-                            <mainClass>org.vinaylogics.SplitDemo</mainClass>
+                            <mainClass>org.vinaylogics.IterationDemo</mainClass>
                         </manifest>
                     </archive>
                 </configuration>
