@@ -5,9 +5,9 @@ public record Trip(
         String licensePlate,
         String carType,
         String driverName,
-        boolean isTrip,
-        String startLocation,
-        String endLocation,
-        int duration
+        boolean ongoing,
+        String pickupLocation,
+        String dropOffLocation,
+        int numberOfPassengers
 ) {
 }
