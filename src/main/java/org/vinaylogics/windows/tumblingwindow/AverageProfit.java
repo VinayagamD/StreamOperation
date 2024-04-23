@@ -1,4 +1,4 @@
-package org.vinaylogics.windows;
+package org.vinaylogics.windows.tumblingwindow;
 
 import org.apache.flink.api.common.functions.MapFunction;
 import org.apache.flink.api.common.functions.ReduceFunction;
