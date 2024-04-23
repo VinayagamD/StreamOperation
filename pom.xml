@@ -125,7 +125,7 @@
                 <configuration>
                     <archive>
                         <manifest>
-                            <mainClass>org.vinaylogics.windows.tumblingwindow.WindowType</mainClass>
+                            <mainClass>org.vinaylogics.windows.slidingwindow.WindowType</mainClass>
                         </manifest>
                     </archive>
                 </configuration>
