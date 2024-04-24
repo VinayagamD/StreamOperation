@@ -125,7 +125,7 @@
                 <configuration>
                     <archive>
                         <manifest>
-                            <mainClass>org.vinaylogics.windows.slidingwindow.WindowType</mainClass>
+                            <mainClass>org.vinaylogics.windows.sessionwindow.WindowType</mainClass>
                         </manifest>
                     </archive>
                 </configuration>
