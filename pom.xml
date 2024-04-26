@@ -125,7 +125,7 @@
                 <configuration>
                     <archive>
                         <manifest>
-                            <mainClass>org.vinaylogics.windows.globalwindow.AverageProfit</mainClass>
+                            <mainClass>org.vinaylogics.evictors.AverageProfit</mainClass>
                         </manifest>
                     </archive>
                 </configuration>
