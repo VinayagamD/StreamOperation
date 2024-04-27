@@ -125,7 +125,7 @@
                 <configuration>
                     <archive>
                         <manifest>
-                            <mainClass>org.vinaylogics.evictors.AverageProfit</mainClass>
+                            <mainClass>org.vinaylogics.watermark.periodicwatermarks.WindowType</mainClass>
                         </manifest>
                     </archive>
                 </configuration>
