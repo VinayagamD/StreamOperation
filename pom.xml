@@ -125,7 +125,7 @@
                 <configuration>
                     <archive>
                         <manifest>
-                            <mainClass>org.vinaylogics.watermark.periodicwatermarks.WindowType</mainClass>
+                            <mainClass>org.vinaylogics.state.managedkeystate.value.StateDemo</mainClass>
                         </manifest>
                     </archive>
                 </configuration>
