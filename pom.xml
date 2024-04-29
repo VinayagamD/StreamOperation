@@ -125,7 +125,7 @@
                 <configuration>
                     <archive>
                         <manifest>
-                            <mainClass>org.vinaylogics.state.managedkeystate.list.StateDemo</mainClass>
+                            <mainClass>org.vinaylogics.state.managedkeystate.reduced.StateDemo</mainClass>
                         </manifest>
                     </archive>
                 </configuration>
