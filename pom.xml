@@ -125,7 +125,7 @@
                 <configuration>
                     <archive>
                         <manifest>
-                            <mainClass>org.vinaylogics.state.managedkeystate.reduced.StateDemo</mainClass>
+                            <mainClass>org.vinaylogics.state.managedkeystate.assignment2.ClickStateDemo</mainClass>
                         </manifest>
                     </archive>
                 </configuration>
