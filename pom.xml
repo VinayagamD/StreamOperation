@@ -125,7 +125,7 @@
                 <configuration>
                     <archive>
                         <manifest>
-                            <mainClass>org.vinaylogics.state.operators.checkpointing.StateDemo</mainClass>
+                            <mainClass>org.vinaylogics.state.operators.broadcast.EmpCount</mainClass>
                         </manifest>
                     </archive>
                 </configuration>
