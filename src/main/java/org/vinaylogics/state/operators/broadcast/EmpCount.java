@@ -25,6 +25,7 @@ import org.apache.flink.util.Collector;
 
 import java.util.Iterator;
 import java.util.Map;
+import java.util.Objects;
 
 public class EmpCount {
 
@@ -89,6 +90,10 @@ public class EmpCount {
         public void processElement(Tuple2<String, String> value, KeyedBroadcastProcessFunction<String, Tuple2<String, String>, String, Tuple2<String, Integer>>.ReadOnlyContext ctx, Collector<Tuple2<String, Integer>> out) throws Exception {
             Integer currCount = countState.value();
 
+            if(Objects.isNull(currCount)){
+                currCount = 0;
+            }
+
             // get card_id of current transaction
             final String cId = value.f1.split(",")[0];
 
@@ -111,7 +116,7 @@ public class EmpCount {
 
         @Override
         public void open(OpenContext openContext) {
-            ValueStateDescriptor<Integer> desc = new ValueStateDescriptor<>("", BasicTypeInfo.INT_TYPE_INFO,0);
+            ValueStateDescriptor<Integer> desc = new ValueStateDescriptor<>("", BasicTypeInfo.INT_TYPE_INFO);
             countState = getRuntimeContext().getState(desc);
         }
     }
