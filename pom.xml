@@ -125,7 +125,7 @@
                 <configuration>
                     <archive>
                         <manifest>
-                            <mainClass>org.vinaylogics.state.managedkeystate.assignment2.ClickStateDemo</mainClass>
+                            <mainClass>org.vinaylogics.state.operators.checkpointing.StateDemo</mainClass>
                         </manifest>
                     </archive>
                 </configuration>
